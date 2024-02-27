@@ -1,0 +1,17 @@
+.big-table {
+  border: 2px solid black;
+  background-color: rgba(223, 243, 182, 0.906);
+  padding: 25px;
+}
+.small-table {
+  border: 2px solid black;
+  background-color: white;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
