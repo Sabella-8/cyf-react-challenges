@@ -4,11 +4,9 @@ import Header from "./Header";
 import BodyTable from "./BodyTable";
 
 function Data() {
-  const scores = allCountryScores;
-  const sortscore = scores.map((sorted) => sorted.name);
-  sortscore.sort;
-  console.log(scores);
-
+  const scores = allCountryScores
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name));
   return (
     <div className="big-table">
       <h1>High Score Per Country</h1>
