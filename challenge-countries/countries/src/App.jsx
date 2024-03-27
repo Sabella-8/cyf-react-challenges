@@ -4,6 +4,7 @@ import Card from "./Card";
 import "./App.css";
 import SearchBox from "./SearchBox";
 import { useState } from "react";
+import SelectRegion from "./SelectRegion";
 function App() {
   const [display, setDisplay] = useState(countriesAll);
   const [inputValue, setInputValue] = useState("");
@@ -19,10 +20,17 @@ function App() {
     });
     setDisplay(inputv === "" ? countriesAll : datas);
   };
+
+  const uniqeuR = new Set();
+  countriesAll.forEach((element) => {
+    uniqeuR.add(element.region);
+  });
+
   return (
     <>
       {" "}
       <SearchBox handleChange={handleChange} />
+      <SelectRegion uniqeuRegion={uniqeuR} />
       <div className="container">
         {display.map((country, index) => {
           return <Card key={index} data={country} />;
