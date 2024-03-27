@@ -1,7 +1,8 @@
 .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 165px 165px 165px;
   gap: 15px;
+  margin: 20px;
 }
 .card img {
   width: 100%;
